@@ -103,4 +103,4 @@ rdfs:comment """
         lv2:default 0.5 ;
         lv2:minimum 0.0 ;
         lv2:maximum 1.0 ;
-    ]
+    ] .
