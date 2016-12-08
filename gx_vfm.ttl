@@ -24,8 +24,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix guiext: <http://lv2plug.in/ns/extensions/ui#>.
-@prefix mod: <http://portalmod.com/ns/modgui#>.
-@prefix time: <http://lv2plug.in/ns/ext/time/#>.
+@prefix time: <http://lv2plug.in/ns/ext/time#>.
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 
 <http://guitarix.sourceforge.net#me>
@@ -48,9 +47,10 @@
     lv2:project <http://guitarix.sourceforge.net/plugins/gx_vfm_> ;
     lv2:optionalFeature lv2:hardRTCapable ;
       
-    lv2:minorVersion 28;
-    lv2:microVersion 3;
+    lv2:minorVersion 34;
+    lv2:microVersion 0;
 
+  guiext:ui <http://guitarix.sourceforge.net/plugins/gx_vfm_gui#_vfm_>;
     
 rdfs:comment """
 
@@ -77,7 +77,7 @@ rdfs:comment """
         lv2:index 2 ;
         lv2:symbol "INTENSITY" ;
         lv2:name "INTENSITY" ;
-        lv2:default 0.5 ;
+        lv2:default 0.2 ;
         lv2:minimum 0.0 ;
         lv2:maximum 1.0 ;
     ]      , [
@@ -100,7 +100,13 @@ rdfs:comment """
         lv2:index 4 ;
         lv2:symbol "VOLUME" ;
         lv2:name "VOLUME" ;
-        lv2:default 0.5 ;
+        lv2:default 0.2 ;
         lv2:minimum 0.0 ;
         lv2:maximum 1.0 ;
     ] .
+
+<http://guitarix.sourceforge.net/plugins/gx_vfm_gui#_vfm_>
+  a guiext:GtkUI;
+  guiext:binary <gx_vfm_ui.so>;
+  guiext:requiredFeature guiext:makeResident;
+  .
