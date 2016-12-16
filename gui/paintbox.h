@@ -22,8 +22,8 @@
  */
 
 
-#ifndef __PAINT_BOX_H__
-#define __PAINT_BOX_H__
+#ifndef __VINTAGE_PAINT_BOX_H__
+#define __VINTAGE_PAINT_BOX_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -33,19 +33,19 @@ extern "C" {
 
 G_BEGIN_DECLS
 
-#define GX_TYPE_PAINT_BOX            (gx_paint_box_get_type ())
-#define GX_PAINT_BOX(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GX_TYPE_PAINT_BOX, GxPaintBox))
-#define GX_PAINT_BOX_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GX_TYPE_PAINT_BOX, GxPaintBoxClass))
-#define GX_IS_PAINT_BOX(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GX_TYPE_PAINT_BOX))
-#define GX_IS_PAINT_BOX_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GX_TYPE_PAINT_BOX))
-#define GX_PAINT_BOX_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GX_TYPE_PAINT_BOX, GxPaintBoxClass))
+#define GX_TYPE_VINTAGE_PAINT_BOX            (gx_paint_box_get_type ())
+#define GX_VINTAGE_PAINT_BOX(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GX_TYPE_VINTAGE_PAINT_BOX, GxVintagePaintBox))
+#define GX_VINTAGE_PAINT_BOX_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GX_TYPE_VINTAGE_PAINT_BOX, GxVintagePaintBoxClass))
+#define GX_IS_VINTAGE_PAINT_BOX(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GX_TYPE_VINTAGE_PAINT_BOX))
+#define GX_IS_VINTAGE_PAINT_BOX_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GX_TYPE_VINTAGE_PAINT_BOX))
+#define GX_VINTAGE_PAINT_BOX_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GX_TYPE_VINTAGE_PAINT_BOX, GxVintagePaintBoxClass))
 
-typedef struct _GxPaintBox GxPaintBox;
-typedef struct _GxPaintBoxClass GxPaintBoxClass;
+typedef struct _GxVintagePaintBox GxVintagePaintBox;
+typedef struct _GxVintagePaintBoxClass GxVintagePaintBoxClass;
 
 
 
-struct _GxPaintBox {
+struct _GxVintagePaintBox {
 	GtkBox box;
 	gchar *paint_func;
 	void (*expose_func)(GtkWidget*, GdkEventExpose*);
@@ -53,13 +53,13 @@ struct _GxPaintBox {
     GdkPixbuf *stock_image;
 };
 
-struct _GxPaintBoxClass {
+struct _GxVintagePaintBoxClass {
 	GtkBoxClass parent_class;
 };
 
 GType gx_paint_box_get_type(void) G_GNUC_CONST;
 GtkWidget *gx_paint_box_new(GtkOrientation orientation, gboolean homogeneous, gint spacing);
-void set_expose_func(GxPaintBox *paint_box, const gchar *paint_func);
+void set_expose_func(GxVintagePaintBox *paint_box, const gchar *paint_func);
 
 G_END_DECLS
 
@@ -67,4 +67,4 @@ G_END_DECLS
 }
 #endif
 
-#endif /* __PAINT_BOX_H__ */
+#endif /* __VINTAGE_PAINT_BOX_H__ */
