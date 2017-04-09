@@ -9,10 +9,10 @@
 .mod-pedal-boxy{{{cns}}} {
     background-position:center center;
     background-repeat:no-repeat;
-    background-size:230px 431px;
+    background-size:326px 431px;
     height:431px;
     position:absolute;
-    width:230px;
+    width:326px;
     border-radius: 21px;
 }
 
@@ -91,7 +91,7 @@
     position:absolute;
     right:30px;
     text-align:center;
-    top:340px;
+    top:350px;
 }
 
 .mod-pedal-boxy{{{cns}}} .mod-plugin-name h1 {
@@ -197,11 +197,13 @@
     width:100%;
 }
 
+.mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob-tone,
 .mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob {
     overflow:hidden;
     position:relative;
 }
 
+.mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob-tone > span.mod-knob-title,
 .mod-pedal-boxy{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
     bottom:0px;
     display:block;
@@ -244,15 +246,23 @@
     width:60px;
     margin:0 auto;
 }
+.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob-tone .mod-knob-image {
+    background-image:url(/resources/knobs/boxy/tone.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 60px;
+    height:60px;
+    width:60px;
+    margin:0 auto;
+}
+.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob-tone > span.mod-knob-title,
 .mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob > span.mod-knob-title {
-    font-size:13px;
+    font-size:11px;
 }
+.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob-tone,
 .mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob {
-    float:left;
-    width:50%;
-}
-.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob {
+    display:inline-block;
     height:73px;
+    width:80px;
 }
 
 /* THREE AND HIGHER KNOBS */
@@ -269,6 +279,8 @@
     width:60px;
     margin:0 auto;
 }
+.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob,
+.mod-pedal-boxy{{{cns}}}.mod-two-knobs .mod-control-group .mod-knob-tone,
 .mod-pedal-boxy{{{cns}}}.mod-three-knobs .mod-control-group .mod-knob,
 .mod-pedal-boxy{{{cns}}}.mod-four-knobs .mod-control-group .mod-knob,
 .mod-pedal-boxy{{{cns}}}.mod-five-knobs .mod-control-group .mod-knob,
@@ -363,6 +375,7 @@
 }
 .mod-pedal-boxy{{{cns}}}.mod-vintage h1,
 .mod-pedal-boxy{{{cns}}}.mod-vintage .mod-enumerated,
+.mod-pedal-boxy{{{cns}}}.mod-vintage .mod-control-group .mod-knob-tone > span.mod-knob-title,
 .mod-pedal-boxy{{{cns}}}.mod-vintage .mod-control-group .mod-knob > span.mod-knob-title
 {
     color:white;
@@ -378,4 +391,7 @@
 ================================================ */
 .mod-pedal-boxy{{{cns}}} .mod-control-group.mod-cairo .mod-knob .mod-knob-image {
     background-image:url(/resources/knobs/boxy/cairo.png{{{ns}}});
+}
+.mod-pedal-boxy{{{cns}}} .mod-control-group.mod-cairo .mod-knob-tone .mod-knob-image {
+    background-image:url(/resources/knobs/boxy/tone.png{{{ns}}});
 }
