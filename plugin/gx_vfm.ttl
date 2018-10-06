@@ -105,8 +105,10 @@ rdfs:comment """
         lv2:maximum 1.0 ;
     ] .
 
+
 <http://guitarix.sourceforge.net/plugins/gx_vfm_gui#_vfm_>
-  a guiext:GtkUI;
+  a guiext:X11UI;
   guiext:binary <gx_vfm_ui.so>;
-  guiext:requiredFeature guiext:makeResident;
+        lv2:extensionData guiext::idle ; 
+        lv2:requiredFeature guiext:makeResident;
   .

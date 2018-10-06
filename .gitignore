@@ -1,3 +1,5 @@
-
+debian
 *.so
 *.lv2
+*.so
+*.o
