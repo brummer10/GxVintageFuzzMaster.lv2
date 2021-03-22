@@ -601,7 +601,6 @@ static void check_value_changed(gx_vfmUI *ui, int i, float* value) {
 		if (ui->block_event != ui->controls[i].port)
 			ui->write_function(ui->controller,ui->controls[i].port,sizeof(float),0,value);
 		send_controller_event(ui, i);
-		ui->block_event = -1;
 	}
 }
 
@@ -952,6 +951,7 @@ static void port_event(LV2UI_Handle handle, uint32_t port_index,
 		if (port_index == ui->controls[i].port) {
 			ui->block_event = (int)port_index;
 			check_value_changed(ui, i, &value);
+			ui->block_event = -1;
 		}
 	}
 }
